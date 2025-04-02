@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Bisutería</title>
+    <link rel="stylesheet" href="css/stylesMarketplace.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+         <img src="Img/2_marketplace/Logo.png" alt="Logo Virtuosas" class="logo">
+         <nav class="menu">
+           <ul>
+            <li><a href="./1.index.html">Inicio</a></li>
+            <li><a href="./2.Marketplace.html" class="active">¿Qué Ofrecemos?</a></li>
+            <li><a href="./3.conocenos.html">Conócenos</a></li>
+            <li><a href="./4.stories.html">Historia</a></li>
+            <li><a href="./5.contactenos.html">Contacto</a></li>
+           </ul>
+         </nav>
+        </header>
+
+    <!-- Contenedor con título "Marketplace" -->
+    <div class="titulo-marketplace">
+        <h1>Marketplace</h1>
+    </div>
+    <div class="slider-container">
+        <div class="slider">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+            <input type="radio" name="slide" id="slide6">
+            <div class="slides">
+          <img src="Img/2_marketplace/Pintura_galeria.jpg" alt="Imagen 1">
+          <img src="Img/2_marketplace/Tejido_galeria.jpg" alt="Imagen 2">
+          <img src="Img/2_marketplace/Vela_galeria.jpeg" alt="Imagen 3">
+          <img src="Img/2_marketplace/Bisuteria_Galeria.jpg" alt="Imagen 4">
+          <img src="Img/2_marketplace/Bisuteria_Galeria.jpg" alt="Imagen 5">
+          <img src="Img/2_marketplace/Inmobiliaria_galeria.jpg" alt="Imagen 6">
+        </div>
+        <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+            <label for="slide6"></label>
+          </div>
+        </div>
+      </div>
+      
+      <main class="container">
+
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar productos o servicios...">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-center">
+                        <div class="categoria-container">
+                            <label for="productosCheckbox" class="categoria-label">Productos</label>
+                            <input type="checkbox" id="productosCheckbox" class="categoria-checkbox">
+                            <div class="subcategoria">
+                                <a href="#bisuteria">Bisutería</a>
+                                <a href="#velas">Velas</a>
+                                <a href="#crochet">crochet</a>
+                                <a href="#pinturas">Pinturas</a>
+                            </div>
+                        </div>
+                        <div class="categoria-container ml-2">
+                            <label for="serviciosCheckbox" class="categoria-label">Servicios</label>
+                            <input type="checkbox" id="serviciosCheckbox" class="categoria-checkbox">
+                            <div class="subcategoria">
+                                <a href="#inmobiliaria">Asesoría Inmobiliaria</a>
+                                <a href="#desarrollo-web">Desarrollo Web</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="productos" id="bisuteria">
+            <div class="producto">
+                <h2 class="titulo-empresa">Bisutería Colibrí</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/Bisuteria_general.jpeg" alt="Bisutería imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/Bisuteria_Anillo.jpg" alt="Bisutería 1">
+                        <img src="Img/2_marketplace/Bisuteria_aretes.jpg" alt="Bisutería 2">
+                        <img src="Img/2_marketplace/Bisuteria_collar.jpg" alt="Bisutería 3">
+                        <img src="Img/2_marketplace/Bisuteria_pulsera.jpg" alt="Bisutería 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Bisutería Colibrí, diseñamos piezas únicas que complementan tu estilo y realzan tu belleza interior.</p>
+                        <p class="categorias">Anillos - Aretes - Collar - Pulsera</p>
+                        <p>Hecho a mano con dedicación y pasión.<br>Perfecto para momentos especiales y para el día a día.<br>Piezas elaboradas en acero inoxidable y baño de oro, combinados con cristales de Swarovski para un brillo inigualable.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Lina, comenzó su emprendimiento hace 5 años, creando piezas únicas con materiales reciclados. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: lina.amaris@gmail.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos" id="bisuteria-2">
+            <div class="producto">
+                <h2 class="titulo-empresa">Analuz</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/tejido miyuki.jpeg" alt="Bisutería imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/Bisuteria_Anillo.jpg" alt="Bisutería 8">
+                        <img src="Img/2_marketplace/Bisuteria_aretes.jpg" alt="Bisutería 5">
+                        <img src="Img/2_marketplace/Bisuteria_collar.jpg" alt="Bisutería 6">
+                        <img src="Img/2_marketplace/Bisuteria_pulsera.jpg" alt="Bisutería 7">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Analuz, diseñamos piezas únicas que complementan tu estilo y realzan tu belleza interior.</p>
+                        <p class="categorias">Anillos - Aretes - Collar - Pulsera</p>
+                        <p>Hecho a mano con dedicación y pasión.<br>Perfecto para momentos especiales y para el día a día.<br>Piezas elaboradas en acero inoxidable y baño de oro, combinados con cristales de Swarovski para un brillo inigualable.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Analuz, comenzó su emprendimiento hace 5 años, creando piezas únicas con materiales reciclados. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: analuz@bisuteria.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos" id="crochet">
+            <div class="producto">
+                <h2 class="titulo-empresa">Carmen Tejidos</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/croché.jpeg" alt="tejido imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/Crochet_1.jpg" alt="crochet 1">
+                        <img src="Img/2_marketplace/Crochet_2.jpg" alt="crochet 2">
+                        <img src="Img/2_marketplace/crochet_3.jpg" alt="crochet 3">
+                        <img src="Img/2_marketplace/Croche_4.jpg" alt="crochet 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Carmen Tejidos, diseñamos piezas únicas que complementan tu estilo y realzan tu belleza interior.</p>
+                        <p class="categorias"> Macramè - Bolsos - Chaquetas - Boinas</p>
+                        <p>Hecho a mano con dedicación y pasión.<br>Perfecto para momentos especiales y para el día a día.<br>Piezas elaboradas en algodon y naylon.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Carmen, comenzó su emprendimiento hace 5 años, creando piezas únicas con materiales reciclados. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: Carmen@Tejidos.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos" id="crochet">
+            <div class="producto">
+                <h2 class="titulo-empresa">Tejidos Macramè</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/macramé.jpeg" alt="tejido imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/macrame_1.jpg" alt="macrame 1">
+                        <img src="Img/2_marketplace/macrame_2.jpg" alt="macrame 2">
+                        <img src="Img/2_marketplace/macrame_3.jpg" alt="macrame 3">
+                        <img src="Img/2_marketplace/macrame_4.jpg" alt="macrame 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Tejidos Macramè, diseñamos piezas únicas que complementan tu estilo y realzan tu belleza interior.</p>
+                        <p class="categorias"> Bolsos - Mural - Cojines - Caminos</p>
+                        <p>Hecho a mano con dedicación y pasión.<br>Perfecto para momentos especiales y para el día a día.<br>Piezas elaboradas en algodon y naylon.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Rosa, comenzó su emprendimiento hace 5 años, creando piezas únicas con materiales reciclados. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: macreme.tejidos@macrame.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos" id="pinturas">
+            <div class="producto">
+                <h2 class="titulo-empresa">Ocasso</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/pintura oleo.jpg" alt="pintura imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/pintura country.jpg" alt="pintura 1">
+                        <img src="Img/2_marketplace/pintura_1.jpg" alt="pintura 2">
+                        <img src="Img/2_marketplace/pintura_2.jpg" alt="pintura 3">
+                        <img src="Img/2_marketplace/pintura_3.jpg" alt="pintura 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Occaso, diseñamos piezas únicas que complementan tu estilo y realzan tu belleza interior.</p>
+                        <p class="categorias"> Òleo - Country - Acrilico - Vinilos</p>
+                        <p>Hecho a mano con dedicación y pasión.<br>Perfecto para momentos especiales y para el día a día.<br>Piezas elaboradas en diferentes tècnicas.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Mariana, comenzó su emprendimiento hace 5 años, creando piezas únicas con materiales reciclados. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: occaso@pintura.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos" id="velas">
+            <div class="producto">
+                <h2 class="titulo-empresa">Resplandor</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/vela gel.jpeg" alt="pintura imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/vela soya.jpg" alt="vela 1">
+                        <img src="Img/2_marketplace/velas_2.jpg" alt="vela 2">
+                        <img src="Img/2_marketplace/velas_3.jpg" alt="vela 3">
+                        <img src="Img/2_marketplace/velas_4.jpg" alt="vela 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Resplandor, diseñamos piezas únicas que complementan tu estilo y realzan tu belleza interior.</p>
+                        <p class="categorias"> Soya - Gel - Cristalizadas - Tè</p>
+                        <p>Hecho a mano con dedicación y pasión.<br>Perfecto para momentos especiales y para el día a día.<br>Piezas elaboradas en diferentes tècnicas.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Mercedes, comenzó su emprendimiento hace 5 años, creando piezas únicas con materiales reciclados. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: resplandor@velas.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios" id="inmobiliaria">
+            <div class="servicio">
+                <h2 class="titulo-empresa">Inmobiliaria Tuapp</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/inmobiliaria logo.jpg" alt="Inmobiliarìa imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/casa_1.jpg" alt="Inmobiliarìa 1">
+                        <img src="Img/2_marketplace/casa_2.jpg" alt="Inmobiliarìa 2">
+                        <img src="Img/2_marketplace/casa_3.jpg" alt="Inmobiliarìa 3">
+                        <img src="Img/2_marketplace/casa_4.jpg" alt="Inmobiliarìa 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Inmobiliarìa Tuapp, vendemos y arrendamos casas y apartamentos para tu confort.</p>
+                        <p class="categorias">Casas - Apartamentos </p>
+                        <p>Modernos y minimalistas.<br>Perfecto para momentos especiales y para el día a día.<br>Espacios ideales para la familia.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Carolina, comenzó su emprendimiento hace 5 años, mostrando casas de amigos. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: inmobiliaria@tuapp.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicios" id="desarrollo-web">
+            <div class="servicio">
+                <h2 class="titulo-empresa">Web_Inter</h2>
+                <div class="contenedor-imagenes">
+                    <div class="imagen-principal">
+                        <img src="Img/2_marketplace/desarrollo web.jpg" alt="web imagen-general">
+                    </div>
+                    <div class="miniaturas">
+                        <img src="Img/2_marketplace/web_1.jpg" alt="web 1">
+                        <img src="Img/2_marketplace/web_2.jpg" alt="web 2">
+                        <img src="Img/2_marketplace/web_3.jpg" alt="web 3">
+                        <img src="Img/2_marketplace/web_4.jpg" alt="web 4">
+                    </div>
+                    <div class="descripcion-producto">
+                        <p>En Web_Inter, desarrollamos tu sitios web responsive .</p>
+                        <p class="categorias"> Blog - Landing - Tienda  </p>
+                        <p>Modernos y minimalistas.<br>Perfecto para tu emprendimiento.<br>Espacios ideales para la familia.</p>
+                    </div>
+                </div>
+                <p class="emprendedora"><strong>Emprendedora:</strong> Margarita, comenzó su emprendimiento hace 2 años, haciendo blog para amigos y familiares. Su trabajo ha sido reconocido por su creatividad y compromiso con el medio ambiente.</p>
+                <div class="contacto">
+                    <p>Email: web_inter@inter.com</p>
+                    <p>Dirección: Cra 90 # 26-32</p>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="Img/2_marketplace/bxl-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p ><a href="#" class="enlaces">¿Quieres ser una de nosotras?</a></p>
+                <p ><a href="#" class="enlaces">virtuosas@email.com</a></p>
+            </div>
+            <div class="footer-center">
+                <p ><a href="#" class="enlaces">Términos y Condiciones</a></p>
+                <p><a href="#" class="enlaces">Política de Privacidad</a></p>
+            </div>
+            <div class="footer-right">
+                <p>Síguenos en Redes Sociales</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/?locale=es_ES" class="iconos">
+                        <box-icon name='facebook-circle' type='logo' animation='tada-hover' color="rgba(78, 205, 196, 1)" size='md'></box-icon>
+                    </a>
+                    <a href="https://www.instagram.com/" class="iconos">
+                        <box-icon name='instagram-alt' type='logo' animation='tada-hover' color="rgba(78, 205, 196, 1)" size='md'></box-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 Virtuosas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

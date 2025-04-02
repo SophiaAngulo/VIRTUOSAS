@@ -1,0 +1,442 @@
+/* Estilos generales */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: regular;
+  font-size: 20px;
+}
+
+/* CONFIGURACION DE HEADER */
+header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para el logo */
+.logo {
+  width: 200px;
+  height: auto;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/* CONFIGURACION DE NAV */
+nav {
+  display: flex; /* Asegura que nav también sea un contenedor flex */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  align-items: center; /* Alinea verticalmente el contenido de nav */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Asegura que ul también sea un contenedor flex */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  justify-content: right;
+}
+
+nav ul li {
+  background-color: #ffffff;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav ul li a::before {
+  display: block;
+  content: '';
+  width: 0%;
+  background: #FF6B6B;
+  height: 3px;
+  position: absolute;
+  top: -5px;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #764DC6;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #FF6B6B;
+}
+
+.active {
+  color: #FF6B6B;
+}
+
+/* Contenedor del título "Marketplace" */
+.titulo-marketplace {
+  background-color: #764DC6;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  z-index: 0;
+  position: relative;
+  top: 0;
+}
+
+.container {
+  display: flex; /* Utiliza Flexbox para el diseño */
+  flex-direction: column; /* Organiza los elementos en columna */
+  width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+  margin: auto; /* Centra el contenedor horizontalmente */
+  padding: 10px; /* Espacio interno alrededor del contenido */
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  position: relative; /* Permite posicionar la navegación */
+  height: 50vh; /* Altura del 50% de la altura de la ventana */
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slides {
+  width: 600%; /* Cambiado a 600% para 6 imágenes */
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+.slides img {
+  width: 16.666%; /* 100% / 6 imágenes */
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+}
+
+input[type="radio"] {
+  display: none; /* Oculta los botones de radio nativos */
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Centra la navegación */
+  display: flex;
+  gap: 10px;
+}
+
+.navigation label {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Crea círculos */
+  background: rgba(0, 0, 0, 0.5); /* Fondo gris semitransparente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.navigation label:hover {
+  background: rgba(0, 0, 0, 0.8);/* Fondo gris más oscuro al pasar el ratón */
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-16.666%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-33.332%);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+#slide5:checked ~ .slides {
+  transform: translateX(-66.664%);
+}
+
+#slide6:checked ~ .slides {
+  transform: translateX(-83.33%);
+}
+
+#slide1:checked ~ .navigation label:nth-child(1),
+#slide2:checked ~ .navigation label:nth-child(2),
+#slide3:checked ~ .navigation label:nth-child(3),
+#slide4:checked ~ .navigation label:nth-child(4),
+#slide5:checked ~ .navigation label:nth-child(5),
+#slide6:checked ~ .navigation label:nth-child(6) {
+  background: #FF6B6B;
+}
+.search-bar {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 100%;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+aside {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.categoria-container {
+  position: relative;
+}
+
+.categoria-label {
+  background-color: #764DC6;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.categoria-checkbox {
+  display: none;
+}
+
+.subcategoria {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+  z-index: 1;
+}
+
+.categoria-checkbox:checked + .subcategoria {
+  display: block;
+}
+
+.subcategoria a {
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.subcategoria a:hover {
+  color: #FF6B6B;
+}
+
+.productos {
+  width: 100%;
+}
+
+.producto {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicios {
+  width: 100%;
+}
+
+.servicio {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-empresa {
+  color: #FF6B6B;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.imagen-principal img {
+  width: 320px;
+  height: 350px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.miniaturas img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.descripcion-producto {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.categorias {
+  color: #FF6B6B;
+  font-weight: bold;
+}
+
+.emprendedora {
+  color: #333;
+  margin-top: 20px;
+}
+
+.contacto {
+  background-color: #4ECDC4;
+  color: #FF6B6B;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.contacto a img {
+  width: 30px;
+  height: 30px;
+}
+
+.whatsapp-logo {
+  width: 50px;
+  height: 50px;
+  fill: #FF6B6B !important;
+}
+
+footer {
+  background-color: #7949b5; /* Color de fondo */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Asegurar que los enlaces sean blancos */
+.enlaces {
+  color: white;
+  text-decoration: none; /* Opcional: Elimina el subrayado */
+}
+
+.enlaces:hover {
+  color: rgba(78, 205, 196, 1); /* Mantiene el efecto hover sin subrayado */
+  text-decoration: none; /* Asegura que siga sin subrayado */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Ajustar color y tamaño de los iconos */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centra los iconos */
+  align-items: center; /* Asegura alineación vertical */
+  gap: 15px; /* Espaciado entre iconos */
+  margin-top: 10px; /* Espaciado respecto al texto */
+}
+
+/* Asegurar que los enlaces no oculten los iconos */
+.iconos {
+  display: inline-block;
+  text-decoration: none;  /* Evitar subrayado */
+}
+
+/* Agregar espacio entre iconos */
+.social-icons a {
+  margin: 0 10px;
+}

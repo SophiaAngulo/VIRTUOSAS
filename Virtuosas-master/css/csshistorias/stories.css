@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+
+
+body {
+    background-color: #f5f5f5;
+    color:#0c0220;
+    line-height: 1.2;
+    align-items: center;
+    text-align:center;
+}
+
+/* CONFIGURACION DE HEADER*/
+header {
+  background-color: #ffffff; /*agrega color de fondo al header*/
+  display: flex; /*pone el contenedor en flex para ajustar mejor los elementos*/
+  align-items: center; /*alinea todo al centro horizontal*/
+  justify-content: space-between; /*pone un espacio en la mitad de los objetos*/
+  padding: 15px; /*agrega un espaciado interior*/ 
+}
+
+header img {
+  width: 230px;  /* Ajusta el ancho según lo necesites */
+  height: auto;   /* Mantiene la proporción de la imagen */
+  padding-left: 80px;
+  background-color: #ffffff;
+}
+
+.logo:hover{ 
+  transform: scale(1.2); /* Efecto en el logo*/
+}
+
+/* CONFIGURACION DE NAV*/
+nav {
+  display: flex;
+  justify-content: flex-end; /* Ubicar al final del contenedor - lado derecho*/
+  flex-wrap: wrap;
+  padding-right: 50px;
+  background-color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /*permite que no se desborde el contenido*/
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+nav ul li {
+  background-color: #ffffff;
+  margin: 3px 10px; /* Reduce el margen vertical */
+  padding: 3px; /* Reduce el espacio dentro del enlace */
+  
+}
+
+nav ul li a::before{ /*Línea sobre el menú*/
+  display: block;
+  content: '';
+  width: 0%;
+  background: #FF6B6B;
+  height: 5px;
+  top:0;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::before{ 
+  width: 100%;
+}
+
+a {
+  text-decoration: none; /* Quita el subrayado */
+  color:#764DC6; /*color de letra a la lista*/
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Semi-bold*/
+  font-size: 1.1em;
+}
+
+a:hover {
+  color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+.active {
+  color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+.historias {
+    position: relative;
+    width: 100%;
+    min-height: 30vw;
+    background-image: url('Encabezado.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
+
+.historias::before {
+    content:"";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8e65df60;
+    z-index: 1;
+}
+
+.historias h1 {
+    font-family:"Playserif";
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 60px;
+    color: #d1c5c589;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-shadow: 0px 3.5px 4px rgb(255, 107, 107, 1)
+  }
+
+.bannerparrafo {
+    position: relative;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1ebeba3;
+    padding: 20px;
+    border-radius: 40px;
+    max-width:900px; 
+    height: auto;
+    color: #0e0e0e;
+    font-family:"Raleway";
+    font-size: 1.6em;
+    line-height: 1.6;
+    z-index: 2;
+    text-align: center;
+    z-index: 2;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.testimonial-container1.reverse {
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    gap: 6rem;                 
+    width: 100%; 
+    max-width: 1200px;
+    height: auto;
+    margin: auto;            
+    flex-direction: row-reverse; 
+    padding: 3rem 2rem;
+  }
+  
+.testimonial-bubble1 {
+    background-color: #4ECDC4; 
+    color: #0e0e0e;               
+    border-radius: 50px;       
+    box-shadow: 0 4px 10px #1f1e1e26; 
+    padding: 4rem;           
+    width: 70%;          
+    line-height: 1.2;   
+    margin-bottom: 50px;      
+    margin-top: 50px;
+    margin: 20px auto; /* Centrar el contenedor */
+    max-width: 90vw;  /* Evita desbordes */
+    overflow-wrap: break-word; /* Evita palabras largas */
+}
+  
+  .testimonial-bubble1 p {
+    margin-bottom: 1rem;
+    font-family:"Raleway";  
+    font-size: 1.4em;
+    text-align: justify; 
+    line-height: 1.2;
+  }
+
+  .testimonial-profile1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
+    justify-content: center;
+  }
+  
+  .testimonial-profile1 img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;         
+    box-shadow: 0 2px 5px 
+  }
+  
+  .testimonial-profile1 h2 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: #0e0e0e;               
+  }
+  
+  .testimonial-profile1 .age {
+    margin-top: 0.7rem;
+    font-size: 1.7rem;
+    color: #0e0e0e; 
+  }
+
+  .testimonial-profile1 .email {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #4ECDC4;            
+  }
+
+.testimonial-background {
+    width: 100%;
+    background-color:#cb8b8b2d;
+  }
+  
+.testimonial-container {
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    gap: 6rem;                
+    width: 100%; 
+    max-width: 1200px;
+    height: auto;    
+    margin: 0 auto;            
+    padding: 3rem 2rem;
+  }
+
+  .testimonial-bubble {
+    background-color: #FF6B6B; 
+    color: #0e0e0e;               
+    border-radius: 50px;       
+    box-shadow: 0 4px 10px #1f1e1e26; 
+    padding: 4rem;           
+    width: 70%;    
+    line-height: 1.2;     
+    margin: 20px auto;
+    margin-bottom: 50px;      
+    margin-top: 50px;
+    max-width: 90vw;
+    overflow-wrap: break-word;
+    text-align: justify;
+  }
+  
+  .testimonial-bubble p {
+    margin-bottom: 1rem; 
+    font-family:"Raleway";
+    font-size: 1.4em;     
+    text-align: justify; 
+    line-height: 1.2;
+}
+
+  .testimonial-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       
+    justify-content: center;
+  }
+  
+  .testimonial-profile img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;         
+    box-shadow: 0 2px 5px 
+  }
+  
+  .testimonial-profile h2 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: #0e0e0e;              
+  }
+
+  .testimonial-profile .age {
+    margin-top: 0.7rem;
+    font-size: 1.5rem;
+    color: #0e0e0e; 
+  }
+  
+  .testimonial-profile .email {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #FF6B6B;            
+  }
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  width: auto;
+  background-color: #764DC6;
+  padding: 40px;
+}
+
+/* se define el contenedor de textos en grid*/
+footer div {
+  background: none;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  width: auto;
+}
+
+/* se definen atributos para la columna 1 */
+.izquierda {
+grid-column: 1;
+place-items: center; /* Centra tanto horizontal como verticalmente */
+}
+
+/* se definen atributos para la columna 2 */
+.centro {
+grid-column: 2;
+place-items: center; /* Centra tanto horizontal como verticalmente */
+}
+
+/* se definen atributos para la columna 3 */
+.derecha {
+grid-column: 3;
+place-items: center; /* Centra tanto horizontal como verticalmente */
+
+}
+
+/* se quita el fondo para los contenedores de texto*/
+footer h2 {
+  background: none;
+}
+
+/* se pone color para los enlaces*/
+.enlaces {
+  color: #ffffff;
+  font-family: 'Poppins';
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #764DC6;
+  text-decoration: none;
+}
+
+/* se pone color y cursor en hover para los enlaces*/
+footer a:hover {
+  color: #4ECDC4;
+  cursor: pointer;
+}
+
+/* se quita fondo de los iconos de redes*/
+.iconos {
+  background: none;
+}
+
+/* se definen atributos para texto de derechos final*/
+footer p {
+  background: none;
+  color: #ffffff;
+  font-size: small;
+  text-align: center;
+  grid-column: 2;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+
+
+
+* 📌 MEDIA QUERIES */
+
+==============HEADER==========================
+
+@media screen and (max-width: 1024px) {
+
+/* Ajusta la dirección y alineación del header para pantallas más pequeñas */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem
+    }
+    
+    /* Elimina el padding izquierdo de la imagen en el header */
+    header img {
+        margin-bottom: 1rem;
+    }
+    
+    /* Centra los elementos de la navegación */
+    nav ul {
+        padding: 0; 
+        line-height: 1.1; /* Reduce la separación entre líneas */
+        margin: 0;
+       display: flex;
+       align-items: center; /* Centra los elementos horizontalmente */
+       justify-content: center; /* Centra en el eje vertical si es necesario */
+       text-align: center; /* Asegura que el texto dentro se vea bien */
+       margin-left: 0;
+       flex-wrap: wrap;
+    }
+}
+
+/* Media Query para pantallas pequeñas (hasta 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajusta la dirección y padding del header */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;   
+    }
+
+
+    nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    nav ul li a {
+      font-size: 0.95rem;      /* Ajusta el tamaño de letra si se ve muy grande */
+    }
+  
+    header img {
+      max-width: 120px;        /* Haz el logo un poco más pequeño */
+      margin-bottom: 0.5rem;
+    }
+  }
+-----------------------------------------------
+
+/* Para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+  /* Ajuste general para testimonios y secciones */
+  
+  
+  .historias h1 {
+    font-size: 55px;
+  }
+  
+  .bannerparrafo {
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 35px;
+}
+  
+  .testimonial-bubble,
+  .testimonial-bubble1 {
+    padding: 5rem;
+    font-size: 1.9em;
+  }
+  
+  .testimonial-profile img,
+  .testimonial-profile1 img {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .testimonial-container,
+  .testimonial-container1.reverse {
+    flex-direction: column; /* Mantiene fila, pero podrías probar columna si se ve muy comprimido */
+    gap: 4rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+
+}
+
+/* Para pantallas de hasta 768px */
+@media (max-width: 768px) {
+  /* Se reordena el layout en columna para mayor legibilidad */
+  
+  .historias {
+
+    min-height: 40vw;
+    background-position: center;
+  }
+  
+  .historias h1 {
+    font-size: 45px;
+  }
+      
+  .bannerparrafo {
+    width: 85%;
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 40px;
+}
+  
+  .testimonial-bubble,
+  .testimonial-bubble1 {
+    padding: 2rem;
+    font-size: 15px;
+    width: 90%;
+  }
+  
+  .testimonial-profile img,
+  .testimonial-profile1 img {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .testimonial-profile h2,
+  .testimonial-profile1 h2 {
+    font-size: 2rem;
+  }
+  
+  .testimonial-profile .age,
+  .testimonial-profile1 .age {
+    font-size: 1.3rem;
+  }
+  
+  .testimonial-profile .email,
+  .testimonial-profile1 .email {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-container,
+  .testimonial-container1.reverse {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+}
+
+/* Para pantallas de hasta 480px */
+@media (max-width: 480px) {
+  .historias h1 {
+    font-size: 35px;
+  }
+  
+  .bannerparrafo {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 20px;
+}
+    
+  .testimonial-bubble,
+  .testimonial-bubble1 {
+    padding: 1.5em;
+    font-size: 11px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .testimonial-container,
+  .testimonial-container1.reverse {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+
+  .testimonial-profile img,
+  .testimonial-profile1 img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .testimonial-profile h2,
+  .testimonial-profile1 h2 {
+    font-size: 1.8rem;
+  }
+  
+  .testimonial-profile .age,
+  .testimonial-profile1 .age {
+    font-size: 1.2rem;
+  }
+  
+  .testimonial-profile .email,
+  .testimonial-profile1 .email {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+=================== MEDIA QUERY FOOT =======================
+
+/* Media Query para tablets (pantallas de hasta 1024px) */
+@media screen and (max-width: 1024px) {
+
+footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* Media Query para móviles (pantallas de hasta 768px) */
+@media screen and (max-width: 768px) {/* Ajusta el footer para una sola columna y centra el texto */
+    
+footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Agrega margen inferior a los elementos del footer */
+    footer div {
+        margin-bottom: 15px;
+    }
+
+}
+
+/* Media Query para pantallas pequeñas (hasta 480px) */
+@media screen and (max-width: 480px) {
+
+/* Ajusta el footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+   
+}
+
+

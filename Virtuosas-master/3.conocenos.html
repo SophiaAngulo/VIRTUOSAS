@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <!-- Definición del charset (codificación de caracteres) -->
+    <meta charset="UTF-8">
+    
+    <!-- Metaetiqueta para asegurar que el diseño sea adaptable a la pantalla (responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/png" href="Img/3_conocenos/favicon.png">
+
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Conócenos</title>
+    
+    <!-- Enlace a la hoja de estilos CSS externa -->
+    <link rel="stylesheet" href="css/cssconocenos/stylecon.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@300;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">   
+
+    <!--<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<header>
+    
+    <img src="Img/3_conocenos/Logo.png" alt="Logo Virtuosas" class="logo"> <!--Agregar logo-->  
+
+    <nav class="menu"> <!-- menu -->
+        <ul>
+            <li><a href="./1.index.html">Inicio</a></li>
+            <li><a href="./2.Marketplace.html">¿Qué Ofrecemos?</a></li>
+            <li><a href="./3.conocenos.html"class="active">Conócenos</a></li>
+            <li><a href="./4.stories.html">Historia</a></li>
+            <li><a href="./5.contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="titulo-container"> <!-- contenedor de titulo con fondo -->
+       
+       <img src="Img/3_conocenos/fondo-titulo.jpg" class="img-titulo"> <!--Agregar imagen de fondo al titulo--> 
+        <div class="overlay">
+            <h1 class="texto-fade-in">¿Quiénes Somos?</h1>
+        </div>
+    </div>
+
+    <div class="container-info"> <!-- contenedor de texto -->
+        <p>Somos un espacio dedicado a visibilizar y apoyar el talento de mujeres de Suba, Bogotá, que con su esfuerzo y creatividad elaboran productos únicos, llenos de historia y pasión.<span class="espacio"></span>
+        Desde bisutería, tejidos y velas artesanales hasta la pintura country, cada artículo refleja el trabajo minucioso y la dedicación de estas emprendedoras que transforman su arte en oportunidades. <span class="espacio"></span>    
+        Nos enorgullece ser un marketplace que conecta a estas virtuosas con el mundo, brindándoles una vitrina para que su arte llegue a más personas, mientras fomentamos la economía local y el empoderamiento femenino. 
+        Cada pieza cuenta una historia y refleja el amor y el esfuerzo de manos expertas que han perfeccionado su arte con el tiempo. Creemos en el poder de la creatividad como una herramienta de transformación, y por ello, trabajamos para dar visibilidad a cada una de estas talentosas artesanas, promoviendo un comercio justo y sostenible. <span class="espacio"></span>
+        ¡Descubre los productos y apoya a estas mujeres llenas de talento y pasión apoyadas por la Casa de Igualdad de Participación de la Mujer!
+        </p>
+        <div class="img-info">
+        <img src="Img/3_conocenos/foto-conocenos.png"> <!-- imagen debajo de parrafo-->
+        </div>
+    </div>
+
+    <section class="mision"> <!-- seccion de cards-->
+        <img src="Img/3_conocenos/mision.jpg" class="img-mision"> <!-- img card-->
+        <div class="info-card">  <!-- contenedor de informacion card-->
+           <h1>Nuestra Misión</h1>
+           <p>Potenciar el trabajo de mujeres emprendedoras en Suba, Bogotá, ofreciendo un espacio para exhibir y comercializar sus creaciones, promoviendo su crecimiento y autonomía.</p>
+        </div>   
+    </section>
+
+    <section class="vision"> <!-- seccion de cards-->
+        <div class="info-card"> <!-- contenedor de informacion card-->
+           <h1>Nuestra Visión</h1> 
+           <p>Convertirnos en un referente en la difusión y valorización del talento artesanal femenino, impulsando su impacto en la economía y la comunidad.</p>
+        </div>
+        <img src="Img/3_conocenos/vision.jpg" class="img-vision">  <!-- img card-->
+    </section>
+
+    <aside class="banner"> <!-- se abre contenedor para banner-->
+        <img src="Img/3_conocenos/banner.png" class="img-banner"> <!-- Agregar imagen de fondo al titulo-->
+             <div class="frase-container">
+                 <h1 class="frase">"No esperes a que se abran las puertas,
+                    constrúyelas tú misma."</h1> <!-- frase motivadora-->
+                 <h2 class="subtitulo-vir">Virtuosas</h2> <!-- subtitulo-->
+             </div>
+    </aside>
+
+    <section class="valores"> <!-- se abre contenedor general para valores-->
+        <h1>Nuestros Valores</h1> <!-- se abre titulo para nuestros valores-->
+        <div class="izquierda"> <!-- contenedor columna 1-->
+            <box-icon class= "icon-valores" name='donate-heart'size="cssSize" color="#4ECDC4" animation='tada-hover'></box-icon> <!--icono manos-->
+
+            <p><span class="subtitulo">Empoderamiento</span> <br> Impulsamos el crecimiento y la autonomía de mujeres emprendedoras.</p> 
+        </div>
+        <div class="centro"> <!-- contenedor columna 2-->
+            <box-icon class= "icon-valores" name='palette'size="cssSize" color="#4ECDC4" animation='tada-hover'></box-icon> <!--icono creatividad-->
+            <p><span class="subtitulo">Creatividad </span> <br> Valoramos la originalidad y el arte en cada producto elaborado.</p>
+        </div>
+        <div class="derecha"> <!-- contenedor columna 3-->
+            <box-icon class= "icon-valores" name='group'size="cssSize" color="#4ECDC4" animation='tada-hover'></box-icon> <!--icono grupo-->
+            <p><span class="subtitulo">Comunidad </span> <br> Fomentamos el apoyo mutuo y el desarrollo económico local.</p>
+        </div>
+    </section>
+
+    <footer> <!-- contenedor footer-->
+        <div class="izquierda">
+            <h2 ><a href="#" class="enlaces">¿Quieres ser una de nosotras?</a></h2>
+            <h2 ><a href="#" class="enlaces">virtuosas@email.com</a></h2>
+        </div>
+
+        <div class="centro">
+            <h2 ><a href="#" class="enlaces">Términos y Condiciones</a></h2>
+            <h2 ><a href="#" class="enlaces">Política de Privacidad</a></h2>
+        </div>
+
+        <div class="derecha">
+            <h2 ><a href="#" class="enlaces">Síguenos en Redes Sociales</a></h2>
+            <a href="https://www.facebook.com/?locale=es_ES"><box-icon class="iconos" name='facebook-circle' type='logo' animation='tada-hover' color="#4ECDC4" size='md'></box-icon></a>
+            <a href="https://www.instagram.com/"><box-icon class="iconos" name='instagram-alt' type='logo' animation='tada-hover' color="#4ECDC4" size='md'></box-icon></a>
+        </div>
+
+        <p>&copy; 2025 Virtuosas. Todos los derechos reservados.</p> <!--derechos-->
+    
+    </footer>
+
+</body>
+
+</html>

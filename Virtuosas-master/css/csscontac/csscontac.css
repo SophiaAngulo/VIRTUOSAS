@@ -1,0 +1,556 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Mejora el control del tamaño */
+}
+
+body {
+    height: 100%;
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    /*overflow-x: hidden;  Esto evita el desplazamiento horizontal */
+}
+
+/* CONFIGURACION DE HEADER*/
+header {
+    background-color: #ffffff; /*agrega color de fondo al header*/
+    display: flex; /*pone el contenedor en flex para ajustar mejor los elementos*/
+    align-items: center; /*alinea todo al centro horizontal*/
+    justify-content: space-between; /*pone un espacio en la mitad de los objetos*/
+    padding: 15px; /*agrega un espaciado interior*/ 
+}
+
+header img {
+    width: 230px;  /* Ajusta el ancho según lo necesites */
+    height: auto;   /* Mantiene la proporción de la imagen */
+    padding-left: 80px;
+    background-color: #ffffff;
+}
+
+.logo:hover{ 
+    transform: scale(1.2); /* Efecto en el logo*/
+}
+
+/* CONFIGURACION DE NAV*/
+nav {
+    display: flex; /*organiza los elementos en línea*/
+    justify-content: flex-end; /* Ubicar al final del contenedor - lado derecho*/
+    flex-wrap: wrap; 
+    padding-right: 50px;
+    background-color: #ffffff;
+}
+
+nav ul {
+    list-style: none; /*quita los puntos*/
+    display: flex;
+    flex-wrap: wrap; /*permite que no se desborde el contenido*/
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+nav ul li {
+    background-color: #ffffff;
+    margin: 3px 10px; /* Reduce el margen vertical */
+    padding: 3px; /* Reduce el espacio dentro del enlace */
+    
+}
+
+nav ul li a::before{ /*Línea sobre el menú*/
+    display: block;
+    content: '';
+    width: 0%;
+    background: #FF6B6B;
+    height: 5px;
+    top:0;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before{ 
+    width: 100%;
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado */
+    color:#764DC6; /*color de letra a la lista*/
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Semi-bold*/
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+.active {
+    color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+
+
+
+
+ /*header con el menú de navegación
+
+ header{
+    background-color: rgb(255, 255, 255);
+    color: rgba(118, 77, 198, 1);
+    display: flex;
+    justify-content: space-between;/* Separa el logo a la izquierda y el menú a la derecha 
+    align-items: center; /* Alinea verticalmente los elementos 
+    padding: 1px 20px;
+    width: 100%; 
+    max-width: 100vw; 
+    position: fixed;
+    
+    }
+    .logoc {
+     margin-right: 4px;
+    }
+    .logo {
+        width: 150px;  /* Ajusta el tamaño deseado para el logo 
+        height: auto;  /* Mantiene la proporción original 
+      }
+    
+     nav{
+         display: flex;
+         margin-right: 300px;
+     }
+ 
+     nav ul {
+         display: flex;
+         list-style: none; /*quita los puntos
+         gap: 33px; /*espacio entre lo navegable
+     }
+ 
+     nav ul li {
+         margin: 0; 
+         padding: 0;
+     }
+ 
+     nav ul li a {
+         text-decoration: none;/*quita la linea del link
+         color: rgba(118, 77, 198, 1);
+         font-weight: bold; 
+         font-family: 'popping';
+     }
+     nav ul li a:hover {
+         color: #616161;
+      }
+      .active{
+        color: rgba(255, 107, 107, 1);
+      }
+ */
+
+/* fondo de la imagen*/
+main{
+    background-image: url(img/Banner\ pagina\ principal.jpeg);
+    background-repeat: no-repeat; /*que no se repita la imagen*/
+    background-size: cover;/*ajusta la imagen para cubrir toda el área. */
+    padding-top: 2%;
+    padding-bottom:4%;
+}
+
+/* cuadro que engloba el formulario*/
+
+.formulario {
+    display: flex; /*organiza los elementos en columna.*/
+    flex-direction: column; /*organiza los elementos en columna.*/
+    background-color: rgba(255, 107, 107, 0.85); /* Fondo con opacidad para mejorar visibilidad */
+    border-radius: 30px; /*redondo border caja*/
+    width: 40%; /*ocupa soo el 40 porciento de la pantalla*/
+    padding: 5px 30px 30px 25px;
+    margin-left: 10%; /* Ajusta la distancia desde el borde izquierdo */
+    margin-top: 50px; /* Ajusta la distancia desde la parte superior */
+}
+
+/*partes del formulario*/
+
+/*titulo formulario*/
+.formulario h2{
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family:'Playfair Display';
+    font-size: 40px;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(118, 77, 198, 1); /* Agrega una sombra al texto con color morado */
+    margin-bottom: 15px;
+    word-wrap: break-word; /*y asi si el espacio se corta la plabra se divide*/
+    padding-top: 12px;
+    
+    
+}
+
+.formulario form{
+display: flex;
+flex-direction: column; /* Organiza los elementos en columna */
+gap: 10px; /* Espacio entre los elementos del formulario */
+margin-top: 5px;
+}
+
+.formulario form label {
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins';
+}
+
+.formulario form input{
+    font-family: 'Raleway' ;
+    border: 2px solid; /* Grosor del borde  */
+    border-color: rgba(78, 205, 196, 1);  /* Color del borde */
+    border-radius: 5px;
+    height: 30px; /*Altura del input */
+}
+
+.formulario form select{
+    font-family:'Raleway' ;
+    border:2px solid;
+    border-color: rgba(78, 205, 196, 1);
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el select */
+}
+
+
+.formulario form textarea {
+    font-family:'Raleway' ;
+    border: 2px solid;
+    border-color: rgba(78, 205, 196, 1);
+    border-radius: 5px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 75px;  /* Altura del textarea */
+    resize: vertical;  /* Permite cambiar el tamaño verticalmente *
+    max-width: 100%;  /* Evita que se extienda más allá del contenedor */
+}
+
+.formulario button {
+    padding: 10px; /* Espaciado interno */
+    background-color: rgba(78, 205, 196, 1);
+    color: white;
+    border:none;
+    border-radius: 50px;
+    align-self: flex-end;
+    width: auto; /* Ancho automático */
+    height: 30px ; 
+    display: flex; /* Para alinear contenido */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    font-size: 14px; /* Ajusta el tamaño del texto según necesites */
+    font-family:'Poppins';
+    text-align: center;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+/*Boton al pasar el cursor*/
+.formulario button:hover {
+    background-color: rgb(62, 160, 154);
+    color: white;
+    border:none;
+    border-radius: 50px; 
+}
+
+/* CONFIGURACION DE FOOTER*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    width: auto;
+    background-color: #764DC6;
+    padding: 40px;
+}
+
+/* se define el contenedor de textos en grid*/
+footer div {
+    background: none;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    width: auto;
+}
+
+/* se definen atributos para la columna 1 */
+.izquierda {
+  grid-column: 1;
+  place-items: center; /* Centra tanto horizontal como verticalmente */
+}
+
+/* se definen atributos para la columna 2 */
+.centro {
+  grid-column: 2;
+  place-items: center; /* Centra tanto horizontal como verticalmente */
+}
+
+/* se definen atributos para la columna 3 */
+.derecha {
+  grid-column: 3;
+  place-items: center; /* Centra tanto horizontal como verticalmente */
+  
+}
+
+/* se quita el fondo para los contenedores de texto*/
+footer h2 {
+    background: none;
+}
+
+/* se pone color para los enlaces*/
+.enlaces {
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #764DC6;
+    text-decoration: none;
+}
+
+/* se pone color y cursor en hover para los enlaces*/
+footer a:hover {
+    color: #4ECDC4;
+    cursor: pointer;
+}
+
+/* se quita fondo de los iconos de redes*/
+.iconos {
+    background: none;
+}
+
+/* se definen atributos para texto de derechos final*/
+footer p {
+    background: none;
+    color: #ffffff;
+    font-size: small;
+    text-align: center;
+    grid-column: 2;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+
+/*______________________________________________________________________________
+Footer MIO
+________________________________________________________________________________
+
+
+footer{
+    display: flex ;
+    background-color: rgba(118, 77, 198, 1);
+    padding: 1.5%; /* Para más equilibrio en distintas pantallas 
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;    
+    
+}
+
+footer a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+.footertop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'popping';
+    font-weight: bold;
+    line-height:1.5;
+}
+
+
+
+.footerleft {
+    
+    margin: 12px;
+    
+}
+
+.footercenter {
+    margin: 12px;
+}
+
+
+
+.footerright {
+    margin: 12px;
+}
+
+
+
+.footerbottom {
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: 'Raleway';
+}
+
+.facebook{
+    color:  rgba(78, 205, 196, 1);
+}
+
+
+.instagram{
+    color:  rgba(78, 205, 196, 1);
+
+}
+*/
+
+
+
+
+/*responsive---------------------------------*/
+
+/* ================= MEDIA QUERIES ================= */
+/* ================= MEDIA QUERIES ================= */
+
+/* 📱 Para Tablets (Menos de 1024px) */
+@media (max-width: 1024px) {
+    
+    
+    /*esto es mio header {
+        padding: 5px 15px; /* Reduce el padding del header 
+        position: relative; /* Hace que el header ya no sea fijo 
+    }
+
+    nav {
+        margin-right: 50px; /* Reduce el margen derecho del menú 
+    }
+
+    .logo {
+        width: 120px; /* Reduce el tamaño del logo 
+    }
+*/
+
+header {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Elimina el padding izquierdo de la imagen en el header */
+header img {
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+/* Centra los elementos de la navegación */
+nav ul {
+    padding: 0; 
+    line-height: 1.1; /* Reduce la separación entre líneas */
+    margin: 0;
+   display: flex;
+   align-items: center; /* Centra los elementos horizontalmente */
+   justify-content: center; /* Centra en el eje vertical si es necesario */
+   text-align: center; /* Asegura que el texto dentro se vea bien */
+   margin-left: 30px;
+}
+
+
+    main {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-size: cover;
+    }
+
+    .formulario {
+        width: 60%; /* Aumenta el ancho del formulario */
+        margin-left: auto;
+        margin-right: auto; /* Centra el formulario */
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+   /* .footertop {
+        flex-direction: column; /* Cambia la disposición del footer a una sola columna 
+        text-align: center;  Centra el texto */
+    
+
+
+/* 📱 Para Celulares (Menos de 768px) */
+@media (max-width: 768px) {
+    /*header {
+        flex-direction: column; /* Apila el logo y el menú verticalmente 
+        align-items: center; /* Centra los elementos 
+        padding: 10px; /* Ajusta el padding 
+        position: relative; /* Hace que el header deje de ser fijo 
+    }
+
+    nav {
+        margin-right: 0;
+        width: 100%; /* Ocupa todo el ancho disponible 
+        justify-content: center; /* Centra el menú 
+    }
+
+    nav ul {
+        flex-direction: column; /* Apila los ítems del menú verticalmente 
+        align-items: center;  Centra los ítems 
+        gap: 10px; /* Reduce la separación entre enlaces 
+    }
+        */
+   
+    main {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        background-size: cover; /* Ajusta la imagen de fondo */
+    }
+
+    .formulario {
+        width: 80%; /* Hace que el formulario sea más ancho */
+    }
+
+    .formulario h2 {
+        font-size: 35px; /* Reduce el tamaño del título */
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Agrega margen inferior a los elementos del footer */
+    footer div {
+        margin-bottom: 15px;
+    }
+/*
+    .footertop {
+        flex-direction: column; /* Apila los elementos del footer 
+    }
+
+    .footerleft,
+    .footercenter,
+    .footerright {
+        text-align: center; /* Centra el texto del footer 
+        margin-bottom: 10px; /* Agrega espacio entre las secciones 
+    }*/
+}
+
+/* 📱 Para Celulares Pequeños (Menos de 480px) */
+@media (max-width: 480px) {
+   
+    header {
+        flex-direction: column;
+    }
+    .main{
+        background-size:cover ;
+    }
+    .formulario {
+        width: 95%; /* Hace que el formulario sea más ancho */
+    }
+
+    .formulario h2 {
+        font-size: 30px; /* Reduce aún más el tamaño del título */
+    }
+
+    .formulario button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+    }
+
+    /* Ajusta el footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+}

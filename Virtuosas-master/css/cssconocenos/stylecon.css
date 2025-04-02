@@ -1,0 +1,685 @@
+/* QUITA CONFIGURACIONES PREDERTEMINADAS*/
+* {
+    margin: 0; /*quita margenes y padding predeterminados*/
+    padding: 0;
+    text-decoration: none;
+    background-color: #F5F5F5;
+    }
+    
+/* CONFIGURACION DE HEADER*/
+    header {
+        background-color: #ffffff; /*agrega color de fondo al header*/
+        display: flex; /*pone el contenedor en flex para ajustar mejor los elementos*/
+        align-items: center; /*alinea todo al centro horizontal*/
+        justify-content: space-between; /*pone un espacio en la mitad de los objetos*/
+        padding: 15px; /*agrega un espaciado interior*/ 
+        flex-wrap: wrap;
+    }
+
+    header img {
+        width: 230px;  /* Ajusta el ancho según lo necesites */
+        height: auto;   /* Mantiene la proporción de la imagen */
+        padding-left: 80px;
+        background-color: #ffffff;
+    }
+
+    .logo:hover{ 
+        transform: scale(1.2); /* Efecto en el logo*/
+    }
+
+/* CONFIGURACION DE NAV*/
+    nav {
+        display: flex;
+        justify-content: flex-end; /* Ubicar al final del contenedor - lado derecho*/
+        flex-wrap: wrap;
+        padding-right: 50px;
+        background-color: #ffffff;
+    }
+
+    /*nav ul {
+        list-style: none; /*elimina diseño de lista prederterminado
+        padding: 0 100px; /*espacio de margen derecho
+        background-color: #ffffff;
+    }*/
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap; /*permite que no se desborde el contenido*/
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+    }
+
+    /*nav ul li {
+        display: inline; /*ajusta lista horizontal
+        margin-left: 30px; /*espaciado entre elementos del menu
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700; /* Semi-bold 
+        font-size: 1.1em;
+    } */
+
+    nav ul li {
+        background-color: #ffffff;
+        margin: 3px 10px; /* Reduce el margen vertical */
+        padding: 3px; /* Reduce el espacio dentro del enlace */
+        
+    }
+
+    nav ul li a::before{ /*Línea sobre el menú*/
+        display: block;
+        content: '';
+        width: 0%;
+        background: #FF6B6B;
+        height: 5px;
+        top:0;
+        transition: width 0.2s;
+    }
+
+    nav ul li a:hover::before{ 
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none; /* Quita el subrayado */
+        color:#764DC6; /*color de letra a la lista*/
+        background-color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700; /* Semi-bold*/
+        font-size: 1.1em;
+    }
+
+    a:hover {
+        color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+    }
+
+    .active {
+        color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+    }
+    
+
+/* CONFIGURACION DE BODY*/
+    body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+/* CONFIGURACION DE TITULO DE PAGINA*/
+    /* Contenedor para imagen y capa morada */
+    .titulo-container {
+        position: relative;
+        width: 100%;
+        height: 22vh; 
+    }
+
+
+    /* Imagen de fondo */
+    .img-titulo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Capa morada con opacidad */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(142, 101, 223, 0.7); /* Morado con 60% de opacidad */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Titulo ¿quienes somos? */
+    h1 {
+        font-family: 'Playfair Display';
+        font-weight: 800; /* Semi-bold */
+        font-size: 3.2em;
+        color: #ffffff;
+        background: none;
+        text-shadow: 0px 3.5px 4px rgba(255, 107, 107, 1); /* Sombra rosa suave */
+    }
+
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      .texto-fade-in {
+        opacity: 0; /* Inicialmente oculto */
+        animation: fadeIn 1.5s ease-in-out forwards;
+      }
+
+/* CONFIGURACION DE TEXTO INTRODUCCION*/
+    .container-info {
+        display: flex;
+        align-items: flex-start; /* Alinea texto e imagen en la parte superior */
+        max-width: 100%; /* Evita que el contenedor se desborde */
+        overflow: hidden; /* Evita que la imagen se salga */
+        margin-bottom: 10vh;
+    }
+
+    /* texto parrafo */
+    p {
+        padding: 30px 40px; /* Reducido para no afectar el espacio */
+        font-family: 'Raleway';
+        font-size: 1.4em;
+        text-align: justify;
+        line-height: 1.2; /* Mejor espaciado entre líneas */
+        flex: 2; /* Hace que el texto tenga más espacio */
+    }
+
+    .espacio {
+        display: block;
+        margin-bottom: 20px; /* Espacio adicional después del salto de línea */
+    }
+
+/* CONFIGURACION DE IMAGEN*/
+    .img-info {
+        flex: 1; /* Hace que la imagen tenga menos espacio */
+        display: flex; /* Asegura que la imagen no tenga márgenes extra */
+        justify-content: center; /* Centra la imagen dentro del div */
+        align-items: center;
+    }
+    
+    .img-info img {
+        max-width: auto; /* Tamaño controlado de la imagen */
+        height: 550px; /* Mantiene la proporción */
+        display: block; /* Evita márgenes extra */
+    }
+
+/* CONFIGURACION DE CARD MISION*/
+    .mision {
+        display: flex;
+        background-color: #4ECDC4;
+        border-radius: 50px;
+        margin: 0 auto; /* Centra horizontalmente */
+        max-width: 80%;
+        padding: 20px;
+        padding-bottom: 0;
+        margin-bottom: 10vh;
+        box-shadow: 0px 5px 6px rgba(118, 77, 198, 0.5);  
+    }
+
+/* imagen de mision */
+    .img-mision{
+        width: auto;
+        height: 220px;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+/* contenedor de informacion mision y vision */
+    .info-card { 
+        background: none;
+        align-content: space-around;    
+    }
+
+/* titulo nuestra mision y vision*/
+    .info-card h1 {
+        color: black;
+        text-shadow:none;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+/* información de parrafo mision*/
+    .info-card p {
+        background: none;
+        width: 90%;
+        text-align: center;
+    }
+
+/* CONFIGURACION DE CARD VISION*/
+    .vision {
+        display: flex;
+        background-color: #4ECDC4;
+        border-radius: 50px;
+        margin: 0 auto; /* Centra horizontalmente */
+        max-width: 80%;
+        padding: 20px;
+        margin-bottom: 10vh;
+        box-shadow: 0px 5px 6px rgba(118, 77, 198, 0.5);
+    }
+
+/* imagen de vision */
+    .img-vision{
+        width: auto;
+        height: 250px;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+/* animacion para mision y vision */
+    .mision:hover, .vision:hover {
+        transition: transform 0.4s ease-in-out; /* animacion de posición y tiempo */
+        transform: translateY(-8px); /* Se mueve hacia arriba 4px */ 
+    }
+
+/* CONFIGURACION DE BANNER*/
+     /* Contenedor para imagen de banner y capa coral */
+     .banner {
+        position: relative;
+        width: auto;
+        height: 90vh; /* Ocupa toda la pantalla */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Imagen de fondo */
+    .img-banner {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ajusta la imagen sin distorsionarla*/
+        position: absolute;
+    }
+
+/* contenerdor de frase dentro de la de banner */
+    .frase-container {
+        position: absolute;
+        width: auto;
+        height: auto;
+        background: none;
+        justify-content: center;
+        align-content: center;
+    }
+    
+/* frase atributos */
+    .frase {
+        color: #764DC6;
+        text-shadow: 4px 4px 8px rgb(255, 255, 255);
+        text-align: center;
+        justify-content: center;
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+
+
+/* atributos de subtitulo virtuosas*/
+    .subtitulo-vir {
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 2em;
+        text-align: center;
+        background: none;
+    }
+
+
+/* NUESTROS VALORES */
+/* contenedor general de nuestros valores*/
+    .valores {
+        display: grid; /* se define grid */
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        width: auto;
+        margin-bottom: 10vh;
+    }
+
+/* configuracion de titulo nuestros valores */
+    .valores h1 {
+        color: black;
+        text-shadow: none;
+        grid-column: 2;  /* queda en la columna 2 del grid, centro */
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+/* se definen atributos para la columna 1 */
+    .izquierda {
+        grid-column: 1;
+        place-items: center; /* Centra tanto horizontal como verticalmente */
+    }
+
+/* se definen atributos para la columna 2 */
+    .centro {
+        grid-column: 2;
+        place-items: center; /* Centra tanto horizontal como verticalmente */
+    }
+
+/* se definen atributos para la columna 3 */
+    .derecha {
+        grid-column: 3;
+        place-items: center; /* Centra tanto horizontal como verticalmente */
+        
+    }
+
+/* se definen atributos para iconos */
+
+    .icon-valores {
+        color: #4ECDC4;
+        width: 120px;
+        background: none;
+    }
+
+/* se definen atributos para el subtitulo */
+    span {
+        font-family: 'Poppins';
+        font-size: 1.2em;
+        font-weight: 600;
+        display: flex; /* Hace que el span se comporte como un contenedor flexible */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+/* se definen atributos para el parrafo de texto */
+    .valores p {
+        width: 50vh;
+        text-align: center;
+    }
+
+/* CONFIGURACION DE FOOTER*/
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        width: auto;
+        background-color: #764DC6;
+        padding: 40px;
+    }
+
+/* se define el contenedor de textos en grid*/
+    footer div {
+        background: none;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+        width: auto;
+    }
+
+/* se quita el fondo para los contenedores de texto*/
+    footer h2 {
+        background: none;
+    }
+
+/* se pone color para los enlaces*/
+    .enlaces {
+        color: #ffffff;
+        font-family: 'Poppins';
+        font-size: 15px;
+        font-weight: 600;
+        background-color: #764DC6;
+        text-decoration: none;
+    }
+
+/* se pone color y cursor en hover para los enlaces*/
+    footer a:hover {
+        color: #4ECDC4;
+        cursor: pointer;
+        
+    }
+
+    footer a {
+        background-color: #764DC6;
+    }
+
+/* se quita fondo de los iconos de redes*/
+    .iconos {
+        background-color: #764DC6;
+    }
+
+ /* se definen atributos para texto de derechos final*/
+    footer p {
+        background: none;
+        color: #ffffff;
+        font-size: small;
+        text-align: center;
+        grid-column: 2;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+/* CONFIGURACION DE MEDIA QUERY*/
+   /* Media Query para tablets (pantallas de hasta 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Ajusta la dirección y alineación del header para pantallas más pequeñas */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Elimina el padding izquierdo de la imagen en el header */
+    header img {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* Centra los elementos de la navegación */
+    nav ul {
+        padding: 0; 
+        line-height: 1.1; /* Reduce la separación entre líneas */
+        margin: 0;
+       display: flex;
+       align-items: center; /* Centra los elementos horizontalmente */
+       justify-content: center; /* Centra en el eje vertical si es necesario */
+       text-align: center; /* Asegura que el texto dentro se vea bien */
+       margin-left: 30px;
+    }
+    
+    /* Organiza la sección de información en columna */
+    .container-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Ajusta el tamaño máximo de las imágenes de información */
+    .img-info img {
+        height: auto;
+        max-width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    /* Alinea y centra los textos de misión y visión */
+    .mision, .vision {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    /* Agrega margen a las imágenes de misión y visión */
+    .img-mision, .img-vision {
+        margin: 10px 0;
+    }
+
+    /* Ajusta altura de banner y tamaño de fuente de las frases */
+
+    .banner {
+        width: auto;
+        height: 50vh;
+    }
+
+    .frase {
+        text-align: center;
+        justify-content: center;
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .subtitulo-vir {
+        font-size: 1.4em;
+        text-align: center;
+        background: none;
+    }
+    
+    /* Ajusta la visualización de los valores en una sola columna */
+    .valores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Agrega margen inferior a cada valor */
+    .valores div {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* Media Query para móviles (pantallas de hasta 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Reduce la altura del contenedor del título */
+    .titulo-container {
+        height: 15vh;
+    }
+    
+    /* Reduce el tamaño del título principal */
+    h1 {
+        font-size: 2em;
+    }
+
+    /* Ajusta altura de banner y tamaño de fuente de las frases */
+    .banner {
+        width: auto;
+        height: 35vh;
+    }
+
+    /* Ajusta el tamaño del texto de la frase principal */
+    .frase {
+        font-size: 1.9em;
+    }
+
+    .subtitulo-vir {
+        font-size: 1.2em;
+    }
+    
+    /* Reduce el tamaño del texto en párrafos */
+    p {
+        font-size: 1em;
+        padding: 15px;
+    }
+    
+    /* Reduce el margen inferior de la sección de información */
+    .container-info {
+        margin-bottom: 5vh;
+    }
+    
+    /* Ajusta el ancho y padding de las secciones de misión y visión */
+    .mision, .vision {
+        max-width: 80%;
+    }
+    
+    /* Ajusta el footer para una sola columna y centra el texto */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Agrega margen inferior a los elementos del footer */
+    footer div {
+        margin-bottom: 15px;
+    }
+    
+    /* Ajusta el aside */
+    aside {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        background-size: cover; /* Ajusta la imagen de fondo */
+    }
+}
+
+/* Media Query para pantallas pequeñas (hasta 480px) */
+@media screen and (max-width: 480px) {
+    /* Ajusta la dirección y padding del header */
+    header {
+        flex-direction: column;
+        
+    }
+    
+    /* Organiza los elementos de navegación en columna
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: 0.5em;
+        justify-content: center;  
+    }  */
+
+    
+    /* Reduce la altura del contenedor del título */
+    .titulo-container {
+        height: 12vh;
+    }
+    
+    /* Reduce el tamaño del título principal */
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    
+    /* Reduce el tamaño del texto en párrafos */
+    p {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    
+    /* Ajusta el ancho máximo de las secciones de misión y visión */
+    .mision, .vision {
+        max-width: 80%;
+    }
+
+     /* Ajusta el aside */
+     .banner {
+        width: auto;
+        height: 30vh;
+        text-align: center;
+    }
+
+    .frase {
+        font-size: 1em;
+    }
+
+    .subtitulo-vir {
+        font-size: 0.8em;
+    }
+    
+
+    /* Configura los valores en una sola columna */
+    .valores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Ajusta el footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+   
+}

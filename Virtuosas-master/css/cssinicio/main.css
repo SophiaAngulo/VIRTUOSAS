@@ -1,0 +1,1286 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+
+body{
+    background-color: #f5f5f5;
+    font-family: calibri;
+}
+
+/* HEADER ------------------------------------------*/
+
+header {
+    background-color: #ffffff; /*agrega color de fondo al header*/
+    display: flex; /*pone el contenedor en flex para ajustar mejor los elementos*/
+    align-items: center; /*alinea todo al centro horizontal*/
+    justify-content: space-between; /*pone un espacio en la mitad de los objetos*/
+    padding: 15px; /*agrega un espaciado interior*/ 
+}
+
+header img {
+    width: 230px;  /* Ajusta el ancho según lo necesites */
+    height: auto;   /* Mantiene la proporción de la imagen */
+    padding-left: 80px;
+    background-color: #ffffff;
+}
+
+.logo:hover{ 
+    transform: scale(1.2); /* Efecto en el logo*/
+}
+
+/* MENÚ NAVEGACIÓN*/
+
+nav {
+    display: flex;
+    justify-content: flex-end; 
+    flex-wrap: wrap;
+    padding-right: 50px;
+    background-color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /*permite que no se desborde el contenido*/
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+nav ul li {
+    background-color: #ffffff;
+    margin: 3px 10px; 
+    padding: 3px; 
+    
+}
+
+nav ul li a::before{ /*Línea sobre el menú*/
+    display: block;
+    content: '';
+    width: 0%;
+    background: #FF6B6B;
+    height: 5px;
+    top:0;
+    transition: width 0.2s;
+}
+
+nav ul li a:hover::before{ 
+    width: 100%;
+}
+
+a {
+    text-decoration: none; 
+    color:#764DC6; 
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+a:hover {
+    color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+.active {
+    color: #FF6B6B; /* Cambia el color al pasar el mouse (opcional) */
+}
+
+
+/*MAIN---------------------------------------------*/
+
+/*BANNER*/
+
+.banner{
+    
+    position: relative;
+    width: 100%;
+    height: 500px; /*Altura de imagen del banner*/
+    background-image: url(1.\ Banner\ pagina\ principal.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.capa{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(118, 77, 198, 0.2)
+}
+
+.contenido{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+   
+    
+}
+
+.titulo{
+    text-align: left;
+    align-content: left;
+    text-shadow: 3px 3px 5px #FF6B6B; 
+    margin: 60px 0px ;
+    padding: 100px 0px 0px 30px;
+    font-size: 60px;
+    font-family: "Playfair Display", serif;  
+}
+
+
+/* Animación del tÍtulo */
+.titulo{
+    opacity: 0; /* Comienza invisible */
+    animation: aparecer 2s ease-in-out forwards; /* Tiempo de duración de la animación */
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0; /* Inicio invisible */
+    }
+    100% {
+        opacity: 1; /* Se vuelve visible */
+    }
+}
+
+ 
+.boton{
+    display: block;
+    margin: 20px auto 0; 
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    background: #4ecdc4;
+    border-radius: 50px;
+    width: fit-content; /* Hace que el botón tenga el tamaño justo de su contenido */
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.boton:hover{
+    background-color: #FF6B6B;
+    transform: scale(1.2); /* Efecto en el logo*/
+    color: #ffffff;
+}
+
+
+/*CONTADOR*/
+
+.contador{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    background-color: #764DC6;
+    margin: 70px auto 0; 
+    padding: 20px;
+    gap: 20px;
+    align-items: center;   
+}
+
+.columna_1 {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido de cada columna en vertical */
+    align-items: center; /* Centra el contenido de cada columna */
+    width: 23%; /* Cada columna ocupa el 23% del espacio disponible */
+    margin: 10px 0;
+    box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+    padding: 20px;
+    gap: 20px;
+    align-items: center;   
+}
+
+.oracion_1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:40px;
+    color: #ffffff;
+    overflow-x: hidden; 
+    text-align: center;
+}
+
+.titulo_1{
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 2px 3px 4px #4ECDC4;
+}
+
+.parr_1{
+    font-size:2rem;;
+    color: #ffffff;
+}
+ 
+
+/*ANIMACION DEL PÁRRAFO*/
+
+.parr_1{                                        
+    animation: mover-izquierda-derecha 4s 5;    /* Tiempo de duración del efecto - cantidad de repeticiones */
+    animation-fill-mode: forwards;      /* Si se repite no tenga salto al volver al inicio */
+}
+
+@keyframes mover-izquierda-derecha{
+    from{ 
+        transform: translateX(-100PX);    /* El espacio inicial desde donde texto se movera */
+    }
+
+    to{
+        transform: translateX(1px);   /* El espacio final hasta donde texto se movera */
+    }
+}
+
+/*FRASE MOTIVADORA*----------------------------------------------------------------------------------------------------------------*/
+
+.contenedor_frase{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: auto;          
+    background-color: #f5f5f5;
+    padding: 40px 20px;;
+    box-sizing: border-box;
+}
+
+.motivadora {
+    text-align: center;     
+}
+
+.comillas{
+    display: inline-block;   /* Centra las comillas - Asegura que las comillas estén alineadas junto al texto */
+    color: #4ecdc4;
+    font-style: italic;
+    font-weight: 800;
+    font-size:  4rem; 
+    font-family: "Times New Roman", serif;
+    height: 60px;    
+}
+
+
+.frase{
+    color: #4ecdc4;
+    padding: 0px 15px;
+    font-style: italic;
+    font-weight: 800;
+    font-size:2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*TÍTULO EMPRENDEDORAS-----------------------------------------*/
+
+.titulo-emprendedoras{
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100px;           
+}
+
+.titulo_emp{
+    color: #764DC6;
+    font-weight: 800;
+    font-size: 3.2rem;;
+    font-family: "Playfair Display", serif;
+
+}
+
+/*TARJETAS EMPRENDEDORAS-----------------------------------------*/
+
+.contenedor-emp{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 60px 50px 80px;
+    padding: 1px 30px 30px 10px;
+}
+
+
+.tarjeta1{
+position: relative;
+width: 300px;
+height: 400px;
+background: #8E65DF;
+overflow: hidden;
+border-radius: 50px;
+transition: 0.5s;
+}
+
+.tarjeta2{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #FF6B6B;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: 0.5s;
+    }     
+    
+.tarjeta3{
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: #4ECDC4;
+        overflow: hidden;
+        border-radius: 50px;
+        transition: 0.5s;
+    }
+
+.tarjeta1:hover, .tarjeta2:hover, .tarjeta3:hover{
+    box-shadow: 0 5px 15px rgba(118, 77, 198, 1);
+    transform: translateY(-15px);
+}
+
+
+.tarjeta1 .head, .tarjeta2 .head, .tarjeta3 .head{
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.tarjeta1 .head .img, .tarjeta2 .head .img, .tarjeta3 .head .img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%);  /*Ubicación de la imagen en el centro de la tarjeta*/
+}
+
+.tarjeta1 .head .img img, .tarjeta2 .head .img img, .tarjeta3 .head .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.tarjeta1 .contenido, .tarjeta2 .contenido, .tarjeta3 .contenido{
+    height: 200px;
+    padding: 70px 20px 1px 20px;
+    text-align: center;
+
+}
+
+.tarjeta1 .contenido h3, .tarjeta2 .contenido h3, .tarjeta3 .contenido h3{
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;     
+}
+
+.tarjeta1 .contenido h4, .tarjeta2 .contenido h4, .tarjeta3 .contenido h4{
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;     
+}
+
+.tarjeta1 .contenido p, .tarjeta2 .contenido p, .tarjeta3 .contenido p{
+    margin-top: 20px;
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Raleway', sans-serif;    
+}
+
+     
+    /*TARJETAS PRODUCTOS -----------------------------------------*/
+
+    .cont-product{
+        display: flex;
+        justify-content: space-between;
+        height: 250px;
+        margin: 50px;
+        padding: 30px;
+        border-radius: 50PX;
+        background-image: url(2.\ Banner\ productos.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        box-shadow: 0px 0px 40px  rgba(78, 205, 196);
+        
+    }
+
+
+    .columna_A{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .columna_B{
+        display: flex;
+        align-items: center;
+        margin: 50px;
+        padding: 30px;
+        width:100%;
+        
+    }
+
+    .prod1{
+       margin: 25px;
+       align-items: center;
+       width: 130px;            
+    }
+
+
+    .prod{
+        color: #FF6B6B;
+        font-size: 3.2rem;
+        font-style: none;
+        font-family: "Poppins", sans-serif; 
+        text-shadow: 4px 4px 8px #4ECDC4; /*Sombra de la frase*/
+    }
+
+    .productos p{
+        
+        font-size: 1.5rem;
+        font-style: bold;
+        font-family: "Poppins", sans-serif;  
+        font-weight: 500;              
+    }
+    
+    
+    .head_1 .img{
+        width: 150px;
+        height: 150px;
+        background: #FF6B6B;
+        padding: 5px;
+        border-radius: 50%;                   
+    }
+    
+    .head_1 .img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+
+    .info_prod{
+        text-align: center;
+        color: #FF6B6B;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;     
+    }
+
+
+    .prod{
+        justify-items: center;
+    }
+
+
+     /*TARJETAS SERVICIOS -----------------------------------------*/
+
+     .cont-servicios{
+        display: flex;
+        justify-content: space-between;
+        height: 230px;
+        margin:  80px 50px 70px 50px;
+        padding: 30px;
+        border-radius: 50px;
+        background-image: url(3.\ Banner\ servicios.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        box-shadow: 0px 0px 40px  rgba(255, 107, 107);
+    }
+
+
+    .columna_A{
+        margin-left: 40px;
+    }
+
+    .columna_B{
+        display: flex;
+        align-items: center;
+        margin: 50px;
+        padding: 30px;
+        width:100%;
+    }
+
+    .servicios{        
+        font-size: 1.5rem;
+        font-style: bold;
+        font-family: "Poppins", sans-serif;  
+        font-weight: 500;            
+    }
+
+    .serv{
+        color: #764DC6;
+        font-size: 50px;
+        font-style: none;
+        font-family: "Poppins", sans-serif; 
+        text-shadow: 4px 4px 8px #4ECDC4; /*Sombra de la frase*/
+    }
+
+    .serv1{
+        justify-items: center;
+        margin-right: 50px;
+    }
+
+    .columna_A{
+        margin-left: 40px;
+    }
+
+    .servicios p{
+        
+        font-size: 25px;
+        font-style: bold;
+        font-family: "Poppins", sans-serif;  
+        font-weight: 500;              
+    }
+    
+    .columna_B .serv1 .head_1 .img{
+        width: 150px;
+        height: 150px;
+        background: #764DC6;
+        padding: 5px;
+        border-radius: 50%;
+        bottom: -30%;
+        left: 50%;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .serv1 .head_1 .img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .serv1 .info_prod{
+        text-align: center;
+        color: #764DC6;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;     
+    }
+
+
+        
+/* Estilos del menú hamburguesa */
+
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburguesa .linea {
+    width: 30px;
+    height: 2px;
+    background-color: #4ECDC4;
+    margin: 5px 0;
+}
+
+
+/* CONFIGURACION DE FOOTER*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    width: auto;
+    background-color: #764DC6;
+    padding: 40px;
+}
+
+/* se define el contenedor de textos en grid*/
+footer div {
+    background: none;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    width: auto;
+}
+
+/* se definen atributos para la columna 1 */
+.izquierda {
+  grid-column: 1;
+  place-items: center; /* Centra tanto horizontal como verticalmente */
+}
+
+/* se definen atributos para la columna 2 */
+.centro {
+  grid-column: 2;
+  place-items: center; /* Centra tanto horizontal como verticalmente */
+}
+
+/* se definen atributos para la columna 3 */
+.derecha {
+  grid-column: 3;
+  place-items: center; /* Centra tanto horizontal como verticalmente */
+  
+}
+
+/* se quita el fondo para los contenedores de texto*/
+footer h2 {
+    background: none;
+}
+
+/* se pone color para los enlaces*/
+.enlaces {
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #764DC6;
+    text-decoration: none;
+}
+
+/* se pone color y cursor en hover para los enlaces*/
+footer a:hover {
+    color: #4ECDC4;
+    cursor: pointer;
+}
+
+/* se quita fondo de los iconos de redes*/
+.iconos {
+    background: none;
+}
+
+/* se definen atributos para texto de derechos final*/
+footer p {
+    background: none;
+    color: #ffffff;
+    font-size: small;
+    text-align: center;
+    grid-column: 2;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+/* ----------------------------------------------------------TARJETA PRODUCTOS---------------------------------------------------------------------- */
+
+@media (max-width: 1365px)  {
+    .cont-product {
+        flex-direction: row;
+        height: auto;
+        margin: 80px 50px;
+        padding: 20px;
+        }
+    
+        .columna_A, .columna_B {
+            margin: 20px 0;
+           
+        }      
+    
+       
+        .columna_B {
+            padding: 0px;
+            margin: 5px;
+           
+        }   
+        
+        .prod1 {
+            width: 90px; /* Espacio entre los productos */
+            padding: 0px;
+        }
+    
+        .prod {
+            font-size: 3.2rem;
+            text-align: left; /* Centrar el texto */
+           
+        }
+    
+        .productos p {
+            font-size: 1.5rem;
+            text-align: left; /* Centrar el texto */
+            margin-bottom: 10px;
+        } 
+    
+        .prod1 .info_prod {
+            font-size: 1rem; 
+            margin-top: 5px;
+            text-align: center; /* Centrar el texto */
+           
+        }
+    
+        .columna_B .prod1 .head_1 .img {
+            width: 120px; /* Tamaño de la imagen */
+            height: 120px; /* Tamaño de la imagen */
+            padding: 2.5px;
+            border-radius: 50%;
+            margin: auto; 
+        }  
+}  
+
+
+
+/*---------------------------------------*  max-width: 1024px *-----------------------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+
+    /* -- HEADER---------------------------------------------------------------------- */
+   
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Elimina el padding izquierdo de la imagen en el header */
+    header img {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    
+    /* Centra los elementos de la navegación */
+    nav ul {
+        padding: 0; 
+        line-height: 1.1; /* Reduce la separación entre líneas */
+        margin: 0;
+       display: flex;
+       align-items: center; /* Centra los elementos horizontalmente */
+       justify-content: center; /* Centra en el eje vertical si es necesario */
+       text-align: center; /* Asegura que el texto dentro se vea bien */
+       margin-left: 30px;
+    }
+
+   
+    /* -- BANNER---------------------------------------------------------------------- */
+       
+    .titulo {
+        font-size: 50px; /* Reducir el tamaño del texto */
+        padding: 80px 0px 0px 30px; /* Ajustar los márgenes */
+    }
+
+    .capa {
+        background-color: rgba(118, 77, 198, 0.3); /* Cambiar el color de fondo */
+    }
+
+    .boton {
+        font-size: 18px; /* Reducir el tamaño del texto del botón */
+        padding: 8px 16px;
+    }
+   
+   /* -- CONTADOR---------------------------------------------------------------------- */
+   .columna_1 {
+    width: 45%; /* Cada columna ocupa el 45% del ancho */
+    }
+
+    .titulo_1 {
+        font-size: 4rem; /* Reduce el tamaño del título */
+    }
+
+    .parr_1 {
+        font-size: 1.5rem; /* Reduce el tamaño del párrafo */
+    }
+       
+    /* -- FRASE---------------------------------------------------------------------- */
+    .comillas {
+        font-size: 3rem;  /* Reducimos el tamaño de las comillas */
+    }
+
+    .frase {
+        font-size: 1.8rem;  /* Reducimos el tamaño de la frase */
+    }
+
+    .contenedor_frase {
+        padding: 30px 15px; /* Ajustamos el padding */
+    }
+   
+   /*TÍTULO EMPRENDEDORAS-----------------------------------------*/
+   .titulo_emp {
+    font-size: 2.5rem; /* Ajustamos el tamaño de la fuente */
+    }
+        
+   /*TARJETAS EMPRENDEDORAS-----------------------------------------*/
+    .contenedor-emp{
+        margin: 50px 30px;
+        padding: 1px 20px 20px 10px;
+        flex-wrap: wrap;
+        align-items: center;       
+    }
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 45%;  /* Cambiar el tamaño de las tarjetas */
+        margin-bottom: 10px;
+      
+    }
+   
+   /* -- TARJETA PRODUCTOS---------------------------------------------------------------------- */
+   .cont-product {
+    flex-direction: column;
+    height: auto;
+    margin: 60px 30px;
+    padding: 20px;
+    }
+
+    .columna_A, .columna_B {
+        margin: 20px 0;
+    }
+
+    .columna_A{
+        margin-bottom: 1px;
+    }
+
+    .columna_B {
+        padding: 0px;
+        margin: 5px;
+    }
+
+    
+    .prod1 {
+        width: 150px;
+        padding: 0px;
+    }
+
+    .prod {
+        font-size: 2.5rem;
+        text-align: center; /* Centrar el texto */
+       
+    }
+
+    .productos p {
+        font-size: 1.2rem;
+        text-align: center; /* Centrar el texto */
+        margin-bottom: 10px;
+    } 
+
+    .prod1 .info_prod {
+        font-size: 1rem; /
+        margin-top: 5px;
+    }
+
+    .columna_B .prod1 .head_1 .img {
+        width: 120px; /* Tamaño de la imagen */
+        height: 120px; /* Tamaño de la imagen */
+        padding: 2.5px;
+        border-radius: 50%;
+        margin: auto; 
+        align-items: center;
+    }  
+   
+
+
+   /* -- TARJETA SERVICIOS---------------------------------------------------------------------- */
+   
+    .cont-servicios {
+        flex-direction: column;
+        height: auto;
+        margin: 60px 30px;
+        padding: 20px;
+    }
+
+    .columna_A, .columna_B {
+        margin: 20px 0;
+    }
+
+    .columna_B {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los items se ajusten al ancho disponible */
+        justify-content: center;
+    }
+
+    .serv1 {
+        width: 150px;
+        margin: 20px;
+    }
+
+    .serv {
+        font-size: 2rem;
+        text-align: center; /* Centrar el texto */       
+    }
+
+    .servicios p {
+        font-size: 1.5rem;
+    }
+
+    .serv1 .info_prod {
+        font-size: 1rem; /
+        margin-top: 5px;
+    }
+   
+    /*-- Footer---------------------------------------------------------------------- */
+
+}
+
+
+
+
+
+
+/*---------------------------------------* max-width: 768px * - Para pantallas medianas y grandes (tabletas y pantallas pequeñas- ) ---------------------*/
+
+
+@media (max-width: 768px) {
+
+ /* -- HEADER---------------------------------------------------------------------- */
+
+
+
+ /* -- BANNER---------------------------------------------------------------------- */
+ /* Ajustar el tamaño del banner */
+    .banner {
+        height: 300px;
+    }
+
+    /* Cambiar el tamaño del título */
+    .titulo {
+        font-size: 30px;
+    }   
+
+    /* Ajustar el botón */
+    .boton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+/* -- CONTADOR---------------------------------------------------------------------- */
+
+    .titulo_1 {
+        font-size: 3.5rem; /* Reduce el tamaño del título */
+    }
+
+    .parr_1 {
+        font-size: 1.4rem; /* Reduce el tamaño del párrafo */
+    }
+    
+  
+/* -- FRASE---------------------------------------------------------------------- */
+    .comillas {
+        font-size: 2.5rem;  /* Reducimos aún más las comillas */
+    }
+
+    .frase {
+        font-size: 1.4rem;  /* Reducimos aún más la frase */
+    }
+
+    .contenedor_frase {
+        padding: 20px 10px; /* Ajustamos el padding */
+    }
+
+/*TÍTULO EMPRENDEDORAS----------------------------------------------------------------------*/
+    .titulo-emprendedoras {
+        height: 80px; /* Reducimos la altura del contenedor */
+    }
+    .titulo_emp {
+        font-size: 2rem; /* Ajustamos el tamaño de la fuente */
+    }
+
+/*TARJETAS EMPRENDEDORAS----------------------------------------------------------------------*/
+    .contenedor-emp{
+        margin: 50px 20px;
+        padding: 1px 10px 20px 10px;
+        flex-direction: column; /* Colocar las tarjetas en columna */
+        justify-content: center;
+    }
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 80%;  /* Tarjetas más anchas para pantallas medianas */
+        margin-bottom: 30px;
+    }
+
+
+/* -- TARJETA PRODUCTOS---------------------------------------------------------------------- */
+    .cont-product {
+        flex-direction: column;
+        height: auto;
+        margin: 30px 10px;
+        padding: 15px;
+    }
+
+    .columna_A, .columna_B {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .columna_B {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .prod1 {
+        width: 120px;
+        margin: 15px 10px;
+    }
+
+    .prod {
+        font-size: 2rem;
+    }
+
+    .productos p {
+        font-size: 1.1rem;
+    }
+
+    .head_1 .img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .columna_B .prod1 .head_1 .img {
+        width: 100px; /* Tamaño de la imagen */
+        height: 100px; /* Tamaño de la imagen */
+        padding: 2.5px;
+        border-radius: 50%;
+        margin: auto; 
+    }  
+
+    .prod1 .info_prod {
+        font-size: 0.8rem; /
+        margin-top: 5px;
+    }
+
+
+
+/* -- TARJETA SERVICIOS---------------------------------------------------------------------- */
+   .cont-servicios {
+        flex-direction: column;
+        height: auto;
+        margin: 80px 20px;
+        padding: 10px;
+    }
+
+    .columna_A, .columna_B {
+        margin: 15px 0;
+    }
+
+    .columna_B {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .serv1 {
+        width: 120px;
+        margin: 10px;
+    }
+
+    .serv {
+        font-size: 2rem;
+    }
+
+    .servicios p {
+        font-size: 1.3rem;
+    }
+
+    .serv1 .info_prod {
+        font-size: 0.8rem; /
+        margin-top: 5px;
+    }
+
+
+ /*-- Footer--------------------------------------------------------------------------------- */
+
+ footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Agrega margen inferior a los elementos del footer */
+footer div {
+    margin-bottom: 15px;
+}
+
+
+
+}
+
+
+  /* --------------------------------------------------------max-width: 480px (móviles) ---------------------------------------------------------------------- */
+
+
+@media (max-width: 480px) {
+
+    /*-- Header---------------------------------------------------------------------- */
+    header {
+        flex-direction: column;
+        
+    }        
+
+    /* --Banner---------------------------------------------------------------------- */
+    .banner {
+        height: 300px; /* Reducir la altura del banner */
+    }
+
+    .contenido {
+        padding: 0 20px;
+    }
+
+    .titulo {
+        font-size: 20px; /* Reducir el tamaño de fuente */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .boton {
+        font-size: 12px; /* Reducir el tamaño del texto del botón */
+        padding: 6px 12px;
+    }
+   
+
+    /* --- CONTADOR---------------------------------------------------------------------- */
+    
+    .contador {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        align-items: center;
+        padding: 10px;
+    }
+
+
+
+    .titulo_1 {
+        font-size: 2.5rem; /* Reduce aún más el tamaño del título */
+    }
+
+    .parr_1 {
+        font-size: 1.2rem; /* Reduce el tamaño del párrafo */
+    }
+    
+    
+    /* --- FRASE---------------------------------------------------------------------- */
+    .comillas {
+        font-size: 2rem;  /* Hacemos las comillas más pequeñas */
+    }
+
+    .frase {
+        font-size: 1.2rem;  /* Hacemos la frase más pequeña */
+    }
+
+    .contenedor_frase {
+        padding: 15px 5px; /* Ajustamos el padding */
+    }
+
+    /*TÍTULO EMPRENDEDORAS-----------------------------------------*/
+    .titulo-emprendedoras {
+        height: 60px; /* Reducimos más la altura para pantallas más pequeñas */
+    }
+    .titulo_emp {
+        font-size: 1.5rem; /* Reducimos más el tamaño de la fuente */
+    }
+
+    /*TARJETAS EMPRENDEDORAS----------------------------------------------------------------------*/
+    .contenedor-emp{
+        margin: 50px 20px;
+        padding: 1px 10px 20px 10px;
+        flex-direction: column; /* Colocar las tarjetas en columna */
+        justify-content: center;
+    }
+
+    .tarjeta1, .tarjeta2, .tarjeta3{
+        width: 80%;  /* Tarjetas más anchas para pantallas medianas */
+        margin-bottom: 30px;
+    }
+
+
+    /* --Contenedor de productos ----------------------------------------------------------------- */
+    
+    .cont-product {
+        flex-direction: row; 
+        height: auto; /* Quitar la altura fija */
+        margin: 10px; /* Reducir el margen */
+        padding: 15px; /* Reducir el padding */
+        
+    }
+        
+    .columna_A, .columna_B {
+        margin: 10px 0;
+        text-align: center;
+    }
+        
+    .prod1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+        
+    .prod {
+        font-size: 1.8rem;
+    }
+        
+    .productos p {
+        font-size: 1rem;
+    }
+        
+    .head_1 .img {
+        width: 80px;
+        height: 80px;
+    }
+        
+    .info_prod {
+        font-size: 0.8rem;
+    }
+        
+    .columna_B .prod1 .head_1 .img {
+        width: 80px; /* Tamaño de la imagen */
+        height: 80px; /* Tamaño de la imagen */
+        padding: 2px;
+        border-radius: 50%;
+        margin: auto; 
+        }  
+
+    .prod1 .info_prod {
+        font-size: 0.6rem; /
+        margin-top: 5px;*/
+    }
+
+
+   
+    /* --Contenedor de servicios ----------------------------------------------------------------- */
+    .cont-servicios {
+        flex-direction: row;
+        height: auto;
+        margin: 40px 15px;
+        padding: 10px;
+    }
+
+    .columna_A, .columna_B {
+        margin: 10px 0;
+    }
+
+    .columna_B {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos en pantallas pequeñas */
+    }
+
+    .serv1 {
+        width: 100px;
+        margin: 10px 0;
+    }
+
+    .serv {
+        font-size: 1.8rem;
+    }
+
+    .servicios p {
+        font-size: 1rem;
+    }
+
+    .serv1 .info_prod {
+        font-size: 0.8rem;
+    }
+
+    .columna_B .serv1 .head_1 .img {
+        width: 80px; /* Tamaño de la imagen */
+        height: 80px; /* Tamaño de la imagen */
+        padding: 2px;
+        border-radius: 50%;
+        margin: auto; 
+    }  
+
+
+    /* --Footer ----------------------------------------------------------------- */
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
